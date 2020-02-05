@@ -129,8 +129,11 @@ update_pacman_conf()
   sed -i '/blackarch/{N;d}' /etc/pacman.conf
 
   cat >> "/etc/pacman.conf" << EOF
+
 [blackarch]
+
 Include = /etc/pacman.d/$MIRROR_F
+
 EOF
 }
 
